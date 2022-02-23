@@ -1,6 +1,8 @@
 <template>
     <footer>
-        <h2>footer</h2>
+        <div class="container mt-5">
+            <p class="text-center">Made with love</p>
+        </div>
     </footer>
 </template>
 
