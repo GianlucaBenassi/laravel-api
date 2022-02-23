@@ -1,12 +1,27 @@
 <template>
     <main>
-        <h2>main</h2>
+        <div class="container mt-5">
+            <h1>Posts list</h1>
+
+
+        </div>
     </main>
 </template>
 
 <script>
 export default {
-    name: 'Main'
+    name: 'Main',
+    data() {
+        return {
+            posts: []
+        }
+    },
+    created() {
+        axios.get('api/posts')
+            .then((response) => {
+                this.posts = response.data;
+            })
+    }
 }
 </script>
 
